@@ -23,8 +23,8 @@ CACHE_DIR=$2
 ENV_DIR=$3
 BP_DIR=`cd $(dirname $0); cd ..; pwd`
 
-ls -alch $BUILD_DIR
-cp $BP_DIR/scripts/config/templates/.htpasswd $BUILD_DIR/config/
+mkdir -p $BUILD_DIR/config
+cp $BP_DIR/scripts/config/templates/.htpasswd $BUILD_DIR/config
 
 # Use architecture of multi-buildpack to compose behavior.
 # https://github.com/heroku/heroku-buildpack-multi
